@@ -107,7 +107,7 @@ int main() {
 
         // calculate the value of the strike price if the option is exercised
             // functions: exp
-    expectedStrikePrice = strikePrice * exp(-riskFreeInterestRate * timeToExpire);
+    expectedStrikePrice = strikePrice * exp(-riskFreeInterestRate * timeToExpire) * d2NormalDistr;
 
         // calculate the premium (call option price)
     premium = expectedStockValue - expectedStrikePrice;
